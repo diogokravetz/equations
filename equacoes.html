@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="utf-8"/>
+   <title>Resolução de equações - Home</title>
+   <meta name="keywords" content="Equações, Equations, Expressões, Calculadora, Expressão, Resolução, Solver,Solvers,math,calcule,calcular,">
+   <meta name="description" content="Se você quer resolver expressões e equações matemáticas, aqui a sua calculadora irá resolver.">
+   <meta name="author" content="Equations">
+   <meta name="robots" content="index,follow">
+   
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-629KNEG3T3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-629KNEG3T3');
+</script>
+
+  </head>
+<body> 
+<script>
+ 
+  
+  function Digitar(valorParametro) {
+    var elemento = document.getElementById("id_formula");
+    var valorAtual = elemento.value;
+    elemento.value  = valorAtual + valorParametro;
+    Calcular_expressao();
+  }
+  function Calcular_expressao(){
+    var elemento = document.getElementById("id_formula");
+    var valorAtual = elemento.value;   
+    var cal=eval(valorAtual);
+    var resultado = document.getElementById("resultado");
+    resultado.value  = cal;    
+  }  
+
+  
+  function Deletar_expressao(){
+    var elemento = document.getElementById("id_formula");
+    var resultado = document.getElementById("resultado");
+    elemento.value  = "";    
+    resultado.value  = "";    
+  }  
+
+</script>
+
+<header>
+
+</header>
+
+  <div class="container">
+    <form method="POST" class="post-form">
+              <h2>Informe a expressão ou equacao para eu calcular(leia a mensagem abaixo 😀</h2>
+      <div class="header">Calculadora de expressões numéricas e equacoes </div>
+        <label>Expressão informada = </label>
+        <input type="text" class="result" name="formula" value="" maxlength="200" required="" id="id_formula">
+        <label>Resultado = </label>
+      <input type="text" class="result" name="resultado" value="" maxlength="200" required="" id="resultado">
+        
+      <div class="first-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="x" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="y" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="(" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value=")" class="global">
+      </div>
+      <div class="second-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="7" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="8" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="9" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="/" text="%" class="global">
+      </div>
+      <div class="third-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="4" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="5" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="6" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="*" class="global">
+      </div>
+      <div class="fourth-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="1" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="2" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="3" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="-" class="global">
+        <!--esse button e uma raiz quadrada-->
+        <input type="button" name="" onclick="Digitar(this.value);" value="**(1/2)" class="global">
+        <input type="button" name="" onclick="Digitar(this.value)"  value="**" class="global"/>
+        <input type="button" name="" onclick="Digitar(this.value)"  value="," class="global"/>
+        <input type="button" name="" onclick="Digitar(this.value)"  value="**(1/3)" class="global"/>
+      </div>
+      <div class="conflict">
+        <div class="left">
+          <input type="button" name="" onclick="Digitar(this.value);" value="0" class=" big">
+          <input type="button" name="" onclick="Digitar(this.value);" value="Eq()" class=" small">
+          <input type="button" name="" onclick="Deletar_expressao();" value="Del" class=" red small white-text top-margin">
+          <input type="button" name="" onclick="Calcular_expressao();" value="Calcular" class=" green white-text big top-margin">
+        </div>
+        <div class="right">
+          <input type="button" name="" onclick="Digitar(this.value);" value="+" class="global grey plus">
+        </div>
+      </div>
+    </div>
+    </form>
+</div>
+
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm">     
+<h2>OQUE SIGNIFICA CADA BOTAO<h2>
+<h3>Eq() INDICA QUE QUER REALIZAR UMA EQUAÇÃO APENAS APERTE A TECLA EQ() E DIGITE A EQUACAO DENTRO</h3>
+<h3>VARIÁVEIS EXEMPLO 2X  ESCREVER 2*X</h3>
+<h3>= EM EQUAÇÃO É , EXP :2X=3 É 2*X,3</h3>
+<h3>**(1/2) RAIZ  QUADRADA </h3>
+<h3>**(1/3) RAIZ CUBICA  </h3>
+<h3>** POTENCIA</h3>
+<h3>/ DIVISAO OU FRACAO </h3>                                      
+<h3>* MULTIPLICACAO </h3>
+<h2>COMO É / COMO ESCREVER<h2>
+<h3>7x-5=2/Eq(7*x-9,5)<h3>
+<h3>Expressão de frassoes exp= um terço =(1/3)<h3>
+<h3>obrigado por ler agora apenas calcule 😀 <h3>
+</div>
+</div>
+</div>
+
+    
+</body>
+
+<footer>
+
+</footer>
+
+</html>
