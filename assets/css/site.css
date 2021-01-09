@@ -37,6 +37,7 @@ h1{
   .second-row,
   .third-row,
   .fourth-row,
+  .five-row,
   .fifth-row,
   .friday-row,
   .seventh-row,
@@ -58,15 +59,19 @@ h1{
   /*border: 1px solid #000;*/
   }
   .conflict .left,
+  .conflict .center,
   .conflict .right{
     float: left;
     position: relative;
   }
   .left{
-    width: 74%;
+    width: 30%;
   }
   .right{
-    width: 24%;
+    width: 70%;
+  }
+  .center{
+    width: 33%;
   }
   .big{
     padding: 15px;
