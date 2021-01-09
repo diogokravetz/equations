@@ -56,9 +56,9 @@
 
   <div class="container">
     <form method="POST" class="post-form">
-              <h2>Informe a expressão ou equacao para eu calcular(leia a mensagem abaixo 😀</h2>
-      <div class="header">Calculadora de expressões numéricas e equacoes </div>
-        <label>Expressão informada = </label>
+              <h2>Informe  equacao para eu calcular</h2>
+      <div class="header">Calculadora de equacoes </div>
+        <label>equacao informada = </label>
         <input type="text" class="result" name="formula" value="" maxlength="200" required="" id="id_formula">
         <label>Resultado = </label>
       <input type="text" class="result" name="resultado" value="" maxlength="200" required="" id="resultado">
@@ -87,15 +87,33 @@
         <input type="button" name="" onclick="Digitar(this.value);" value="3" class="global">
         <input type="button" name="" onclick="Digitar(this.value);" value="-" class="global">
         <!--esse button e uma raiz quadrada-->
-        <input type="button" name="" onclick="Digitar(this.value);" value="**(1/2)" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="sqrt(4)" class="global">
         <input type="button" name="" onclick="Digitar(this.value)"  value="**" class="global"/>
-        <input type="button" name="" onclick="Digitar(this.value)"  value="," class="global"/>
-        <input type="button" name="" onclick="Digitar(this.value)"  value="**(1/3)" class="global"/>
+        <input type="button" name="" onclick="Digitar(this.value)"  value="." class="global"/>
+        <input type="button" name="" onclick="Digitar(this.value)"  value="sqrt(6)" class="global"/>      
       </div>
-      <div class="conflict">
+      <div class="fifth-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="a" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="b" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="c" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="m" class="global">
+      </div>
+      <div class="friday-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="n" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="z" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="[" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="]" class="global">
+      </div>
+      <div class="seventh-row">
+        <input type="button" name="" onclick="Digitar(this.value);" value="{" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="}" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value=":" class="global">
+        <input type="button" name="" onclick="Digitar(this.value);" value="d" class="global">
+      </div>
+        <div class="conflict">
         <div class="left">
           <input type="button" name="" onclick="Digitar(this.value);" value="0" class=" big">
-          <input type="button" name="" onclick="Digitar(this.value);" value="Eq()" class=" small">
+          <input type="button" name="" onclick="Digitar(this.value);" value="=" class=" small">
           <input type="button" name="" onclick="Deletar_expressao();" value="Del" class=" red small white-text top-margin">
           <input type="button" name="" onclick="Calcular_expressao();" value="Calcular" class=" green white-text big top-margin">
         </div>
@@ -110,27 +128,15 @@
 
 <div class="container">
   <div class="row">
-  <div class="col-sm">     
-<h2>OQUE SIGNIFICA CADA BOTAO<h2>
-<h3>Eq() INDICA QUE QUER REALIZAR UMA EQUAÇÃO APENAS APERTE A TECLA EQ() E DIGITE A EQUACAO DENTRO</h3>
-<h3>VARIÁVEIS EXEMPLO 2X  ESCREVER 2*X</h3>
-<h3>= EM EQUAÇÃO É , EXP :2X=3 É 2*X,3</h3>
-<h3>**(1/2) RAIZ  QUADRADA </h3>
-<h3>**(1/3) RAIZ CUBICA  </h3>
-<h3>** POTENCIA</h3>
-<h3>/ DIVISAO OU FRACAO </h3>                                      
-<h3>* MULTIPLICACAO </h3>
-<h2>COMO É / COMO ESCREVER<h2>
-<h3>7x-5=2/Eq(7*x-9,5)<h3>
-<h3>Expressão de frassoes exp= um terço =(1/3)<h3>
-<h3>obrigado por ler agora apenas calcule 😀 <h3>
-</div>
+  <div class="col-sm">
+
 </div>
 </div>
 
     
 </body>
-
+<h1>EQUACOES</h1>
+<h3>Na matemática, uma equação é uma igualdade com uma ou varias incógnitas. São exemplos de equações as seguintes igualdades: 3sen+25cos=18 3x^{4}-x^{3}+5x^{2}-34x+1211=0 tg+sen^{3}=255 Nesses exemplos, as letras x e y são as incógnitas das equações.</h3>
 <footer>
 
 </footer>
