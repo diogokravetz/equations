@@ -40,7 +40,7 @@
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
-<body>
+<body onload="ExibeTexto();">
 
   <script>
     function Digitar(valorParametro) {
@@ -150,41 +150,91 @@
                 <div class="row">
                   <select onchange="ExibeTexto();" id="ddltipoConversor" name="ddltipoConversor"
                     class="form-control form-control-lg">
-                    <option value="temperatura">Temperatura</option>
+                    <option value="temperatura" selected>Temperatura</option>
                     <option value="comprimento">Comprimento</option>
                   </select>
                 </div>
-
-                <div class="row mb-3">
-                  <div class="col-6 themed-grid-col">
-                    <div class="row">
-                      <input type="number" class="form-control form-control-lg" name="txtTemperaturaDe" value="0"
-                        maxlength="200" required="" id="txtTemperaturaDe" oninput="CalculaTemperatura();">
+                <div id="divformtemperatura">
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaDe" value="0"
+                          maxlength="200" required="" id="txtTemperaturaDe" oninput="CalculaTemperatura();">
+                      </div>
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaPara" value="32"
+                          maxlength="200" required="" id="txtTemperaturaPara" oninput="CalculaTemperatura();">
+                      </div>
                     </div>
-                    <div class="row">
-                      <input type="number" class="form-control form-control-lg" name="txtTemperaturaPara" value="32"
-                        maxlength="200" required="" id="txtTemperaturaPara" oninput="CalculaTemperatura();">
-                    </div>
-                  </div>
-                  <div class="col-6 themed-grid-col">
-                    <div class="row">
-                      <select onchange="CalculaTemperatura();" id="ddltemperaturaDe" name="ddltemperaturaDe"
-                        class="form-control form-control-lg">
-                        <option value="celsius" selected>Graus Celsius</option>
-                        <option value="fahrenheit">Grau Fahrenheit</option>
-                        <option value="kelvin">Kelvin</option>
-                      </select>
-                    </div>
-                    <div class="row">
-                      <select onchange="CalculaTemperatura();" id="ddltemperaturaPara" name="ddltemperaturaPara"
-                        class="form-control form-control-lg">
-                        <option value="celsius">Graus Celsius</option>
-                        <option value="fahrenheit" selected>Grau Fahrenheit</option>
-                        <option value="kelvin">Kelvin</option>
-                      </select>
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <select onchange="CalculaTemperatura();" id="ddltemperaturaDe" name="ddltemperaturaDe"
+                          class="form-control form-control-lg">
+                          <option value="celsius" selected>Graus Celsius</option>
+                          <option value="fahrenheit">Grau Fahrenheit</option>
+                          <option value="kelvin">Kelvin</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <select onchange="CalculaTemperatura();" id="ddltemperaturaPara" name="ddltemperaturaPara"
+                          class="form-control form-control-lg">
+                          <option value="celsius">Graus Celsius</option>
+                          <option value="fahrenheit" selected>Grau Fahrenheit</option>
+                          <option value="kelvin">Kelvin</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div id="divformcomprimento">
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaDe" value="1"
+                          maxlength="200" required="" id="txtComprimentoDe" oninput="CalculaComprimento();">
+                      </div>
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaPara" value="100"
+                          maxlength="200" required="" id="txtComprimentoPara" oninput="CalculaTemperatura();">
+                      </div>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <select onchange="CalculaComprimento();" id="ddlComprimentoDe" name="ddlComprimentoDe"
+                          class="form-control form-control-lg">
+                          <option value="quilometro">Quilômetro</option>
+                          <option value="metro" selected>Metro</option>
+                          <option value="centímetro">Centímetro</option>
+                          <option value="milímetro">Milímetro</option>
+                          <option value="micrometro">Micrômetro</option>
+                          <option value="nanometro">Nanômetro</option>
+                          <option value="milha">Milha</option>
+                          <option value="jarda">Jarda</option>
+                          <option value="pe">Pé</option>
+                          <option value="polegada">Polegada</option>
+                          <option value="milhanautica">Milha náutica</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <select onchange="CalculaComprimento();" id="ddlComprimentoPara" name="ddlComprimentoPara"
+                          class="form-control form-control-lg">
+                          <option value="quilometro">Quilômetro</option>
+                          <option value="metro">Metro</option>
+                          <option value="centímetro" selected>Centímetro</option>
+                          <option value="milímetro">Milímetro</option>
+                          <option value="micrometro">Micrômetro</option>
+                          <option value="nanometro">Nanômetro</option>
+                          <option value="milha">Milha</option>
+                          <option value="jarda">Jarda</option>
+                          <option value="pe">Pé</option>
+                          <option value="polegada">Polegada</option>
+                          <option value="milhanautica">Milha náutica</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </form>
           </div>
@@ -231,6 +281,50 @@
                 absoluta de um objeto, com zero absoluto sendo 0 K
               </p>
             </div>
+
+            <div class="row" id="divComprimento">
+              <h2>Metros</h2>
+              <p>
+
+                Embora inicialmente definido como ponto de congelação da água (e depois como ponto de fusão do gelo), a
+                escala Celsius é agora oficialmente uma escala derivada, definida em relação à escala de temperatura
+                Kelvin.
+                <br;>
+                  O zero na escala Celsius (0 °C) é agora definido como equivalente a 273,15 K, com uma diferença de
+                  temperatura de 1 °C equivalente a uma diferença de 1 K, ou seja, o tamanho da unidade em cada escala é
+                  a mesma. Isto significa que 100 °C, previamente definido como o ponto de ebulição da água, é agora
+                  definido como equivalente a 373,15 K.
+                  <br;>
+                    A escala Celsius é um sistema de intervalo, mas não um sistema de relação, ou seja, segue uma escala
+                    relativa, mas não uma escala absoluta. Isto pode ser observado porque o intervalo de temperatura
+                    entre 20 °C e 30 °C é o mesmo que entre 30 °C e 40 °C, mas 40 °C não tem o dobro da energia térmica
+                    de um ar de 20 ° C.
+                    <br;>
+                      A diferença de temperatura de 1 °C é equivalente a uma difer
+              </p>
+              <h2>Fahrenheit</h2>
+              <p>
+                O Fahrenheit é uma escala de temperatura termodinâmica, onde o ponto de congelamento da água é de 32
+                graus Fahrenheit (°F) e o ponto de ebulição de 212 °F (com uma pressão atmosférica normal). Isso coloca
+                os pontos de ebulição e de congelamento da água exatamente a 180 graus de separação. Por conseguinte, um
+                grau na escala Fahrenheit é de 1/180 de intervalo entre o ponto de congelação e o ponto de ebulição da
+                água. O zero absoluto é definido como igual a -459,67 °F.
+                <br;>
+
+                  A diferença de temperatura de 1 °F é o equivalente a uma diferença de temperatura de 0,556 °C
+              </p>
+              <h2>
+                Kelvin
+              </h2>
+              <p>
+                O kelvin (símbolo: K) é a unidade de base do Sistema Internacional de Unidades (SI) para a grandeza
+                temperatura termodinâmica. O kelvin é a fração 1/273,16 da temperatura termodinâmica do ponto triplo da
+                água, ou seja, é definido de tal modo que o ponto triplo da água é exatamente 273,16 K.[1] É uma das
+                sete unidades de base do SI, muito utilizada na física e química. É utilizado para medir a temperatura
+                absoluta de um objeto, com zero absoluto sendo 0 K
+              </p>
+            </div>
+
           </div>
       </main>
     </div>
@@ -244,14 +338,20 @@
 
       if (valorddltipoConversor === "temperatura") {
         $("#divTemperatura").show();
+        $("#divComprimento").hide();
+        $("#divformtemperatura").show();
+        $("#divformcomprimento").hide();
       } else {
         $("#divTemperatura").hide();
+        $("#divComprimento").show();
+        $("#divformtemperatura").hide();
+        $("#divformcomprimento").show();
       }
 
     };
 
   </script>
-
+  <!--regra para calcular a temperatura-->
   <script>
     function CalculaTemperatura() {
       var txtTemperaturaDe = document.getElementById("txtTemperaturaDe");
@@ -291,6 +391,77 @@
         var calculo = ((parseFloat(valortxtTemperaturaDe) - 273.15) * 9 / 5 + 32);
         txtTemperaturaPara.value = calculo;
       }
+    };
+
+  </script>
+  <!--regra para calcular a comprimento-->
+  <script>
+    function CalculaComprimento() {
+      var txtComprimentoDe = document.getElementById("txtComprimentoDe");
+      var valortxtComprimentoDe = txtComprimentoDe.value;
+
+      var txtComprimentoPara = document.getElementById("txtComprimentoPara");
+      var valortxtComprimentoPara = txtComprimentoPara.value;
+
+      console.log(valortxtComprimentoDe);
+      console.log(valortxtComprimentoPara);
+
+      var ddlComprimentoDe = document.getElementById("ddlComprimentoDe");
+      var valorddlComprimentoDe = ddlComprimentoDe.value;
+
+      var ddlComprimentoPara = document.getElementById("ddlComprimentoPara");
+      var valorddlComprimentoPara = ddlComprimentoPara.value;
+
+      console.log(valorddlComprimentoDe);
+      console.log(valorddlComprimentoPara);
+
+      
+      const expr = valorddlComprimentoDe + "_" + valorddlComprimentoPara;
+
+      switch (expr) {
+        case "quilometro_metro":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1000));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_centímetro":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 100000));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_milímetro":
+
+          break;
+        case "quilometro_micrometro":
+
+          break;
+        case "quilometro_nanometro":
+
+          break;
+        case "quilometro_milha":
+          var calculo = ((parseFloat(valortxtComprimentoDe) / 1609));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_jarda":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1094));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_pe":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 3281));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_polegada":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 39370));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_milhanautica":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1852));
+          txtComprimentoPara.value = calculo;
+          break;
+        default:
+          break;
+      }
+
+
+
     };
 
   </script>
